@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Factura</h1>
+  <form action="" onsubmit="return false">
+    <p>Concepto: <input type="text" id="productName" required></p>
+    <p>Cantidad: <input type="number" step="1" id="productUnits" required></p>
+    <p>Precio: <input type="number" step="0.01" id="productPrice" required> €</p>
+    <button type="submit" onclick="addRow()">Insertar</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Concepto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Precio Total</th>
+        <th class="removeCell"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">Subtotal</td>
+        <td class="subTotalCell">0000</td>
+        <td class="removeCell"></td>
+      </tr>
+      <tr>
+        <td>Tasa:</td>
+        <td class="taxCell">30%</td>
+        <td>Impuestos:</td>
+        <td class="taxImportCell">0000</td>
+        <td class="removeCell"></td>
+      </tr>
+      <tr>
+        <td colspan="3">TOTAL</td>
+        <td class="totalCell">0000</td>
+        <td class="removeCell"></td>
+      </tr>
+    </tbody>
+  </table>
+    <p>	
+    <button type="button" onclick="setTax('5%')">Tasa 5%</button>
+    <button type="button" onclick="setTax('15%')">Tasa 15%</button>
+    <button type="button" onclick="setTax('30%')">Tasa 30%</button>
+    </p>
+
+  <script src="script.js"></script>
+</body>
+</html>

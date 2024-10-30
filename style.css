@@ -1,0 +1,27 @@
+table{
+  border-collapse: collapse;
+  border: 1px solid blue;
+}
+td{
+  text-align: right;
+  border: 1px solid blue;
+  background-color:rgb(106, 218, 255);
+}
+th{
+  color: white;
+  background-color: blue;
+  border: 1px solid blue;
+}
+.removeCell{
+  text-align: center;
+  cursor: pointer;
+  width: 30px;
+  transition: transform 0.2s;
+}
+.removeCell:hover{
+  transform: scale(1.05);
+  background-color:rgb(66, 203, 248);
+}
+.taxCell{
+  color: red;
+}
